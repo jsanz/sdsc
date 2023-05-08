@@ -1,13 +1,14 @@
-### Spatial Data Science Conference Bootcamp - 2023 - New York
+### Spatial Data Science Conference Bootcamp - 2023 - Madrid
 
 # Foundations of Geospatial 
 
-https://spatial-data-science-conference.com/bootcamps/2023/#register
+https://spatial-data-science-conference.com/bootcamps/2023/Madrid/
 
-![sdsc](https://camo.githubusercontent.com/d493411c6fdf1da870c898d43ff3e93dd8ae0dfcca632be6711ce5ebd3149607/68747470733a2f2f7370617469616c2d646174612d736369656e63652d636f6e666572656e63652e636f6d2f696d672f323032332f7265706f7369746f72792f6e792d73756d6d69742d636172642d312e706e67)
+![sdsc](./img/banner.png)
 
 ### Additional Resources
 
+* Original version of this workshop by Danny Sheehan - https://github.com/nygeog/sdsc
 * Class for Pratt SAVI 810 2020-03: Intro to Python Scripting for Geospatial - https://github.com/pratt-savi-810/pratt-savi-810-2020-03
 * Geographic Data Science Lab is a research centre at the University of Liverpool -  https://www.liverpool.ac.uk/geographic-data-science/
 * CSC Finland – IT Center for Science - Welcome to Introduction to Python GIS -course 2018 - https://automating-gis-processes.github.io/CSC/index.html
@@ -20,7 +21,22 @@ https://spatial-data-science-conference.com/bootcamps/2023/#register
 * Geographic Data Science, a course designed by Dr. Dani Arribas-Bel - https://darribas.org/gds_course/content/home.html
 
 
-## Setup 
+## Setup
+
+### With `pip`
+
+Ensure you have at least python 3.8 with `python --version` and `pip` installed.
+
+* Ensure you have `python-venv` installed on your system: https://docs.python.org/3/library/venv.html
+* Clone this repo and switch to the `madrid` branch. In one step: `git clone --branch madrid --single-branch --depth 1 https://github.com/jsanz/sdsc.git`
+* Create a new virtual environment in the `env` folder: `python3 -m venv env`
+* Activate the environment: `source env/bin/activate`
+* Install the requirements: `pip install -r requirements.txt`
+* Start the Jupyter notebook system: `jupyter notebook`
+
+### With `miniconda` 
+
+> These are the original setup instructions from Danny Sheehan
 
 I generally recommend using Miniconda - https://docs.conda.io/en/latest/miniconda.html - for managing geospatial python environments. 
 
@@ -41,9 +57,7 @@ Conda install from requirements.txt
 `conda install --yes --file requirements.txt`
 
 
-
-
-### List of Installations
+#### List of Installations
 
 Install Jupyter Lab
 
