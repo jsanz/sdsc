@@ -23,18 +23,36 @@ https://spatial-data-science-conference.com/bootcamps/2023/Madrid/
 
 ## Setup
 
-### With `pip`
+### Get the materials
+
+Either:
+* Download the repo from <https://github.com/jsanz/sdsc/archive/refs/heads/madrid.zip>
+* Clone this repo and switch to the `madrid` branch. In one step: 
+
+```
+git clone --branch madrid --single-branch --depth 1 https://github.com/jsanz/sdsc.git
+```
+
+
+### Run the notebook with `docker`
+
+* Build the image: `docker build -t sdsc .`
+* Run the image `docker run --rm -p 8888:8888 sdsc:latest` (remember to mount the repo if you want to keep changes with `-v ${PWD}:/sdsc`)
+* Open your browser at `http://localhost:8888?token=sdsc`
+
+### Run with `pip` and a virtual environment
 
 Ensure you have at least python 3.8 with `python --version` and `pip` installed.
 
 * Ensure you have `python-venv` installed on your system: https://docs.python.org/3/library/venv.html
-* Clone this repo and switch to the `madrid` branch. In one step: `git clone --branch madrid --single-branch --depth 1 https://github.com/jsanz/sdsc.git`
 * Create a new virtual environment in the `env` folder: `python3 -m venv env`
 * Activate the environment: `source env/bin/activate`
 * Install the requirements: `pip install -r requirements.txt`
 * Start the Jupyter notebook system: `jupyter notebook`
 
-### With `miniconda` 
+> :warning: if `pip` can't get binaries for your operating system you may need to install other libraries (gdal, gcc, etc.) to build the python packages.
+
+### Run with `miniconda` 
 
 > These are the original setup instructions from Danny Sheehan
 
