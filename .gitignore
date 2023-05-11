@@ -128,5 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.ipython
-.local
+.ipython/
+.local/
+.jupyter/
+.vscode/
+
