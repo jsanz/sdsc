@@ -1,5 +1,12 @@
 FROM python:slim
 
+RUN apt-get update -qq && \
+    DEBIAN_FRONTEND=noninteractive \
+      apt-get -y -qq install \
+        g++ \
+        libgdal-dev && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt /tmp/requirements.txt
 
 RUN pip install -r /tmp/requirements.txt
