@@ -6,21 +6,6 @@ https://spatial-data-science-conference.com/bootcamps/2023/Madrid/
 
 ![sdsc](./img/banner.png)
 
-### Additional Resources
-
-* Original version of this workshop by Danny Sheehan - https://github.com/nygeog/sdsc
-* Class for Pratt SAVI 810 2020-03: Intro to Python Scripting for Geospatial - https://github.com/pratt-savi-810/pratt-savi-810-2020-03
-* Geographic Data Science Lab is a research centre at the University of Liverpool -  https://www.liverpool.ac.uk/geographic-data-science/
-* CSC Finland – IT Center for Science - Welcome to Introduction to Python GIS -course 2018 - https://automating-gis-processes.github.io/CSC/index.html
-* https://modern-gis-curriculum-new-learngis.hub.arcgis.com/
-* https://introduction-to-remote-sensing-learngis.hub.arcgis.com/
-* https://learn.arcgis.com/en/gallery/
-* https://geobgu.xyz/py/index.html
-* https://pygis.io/docs/a_intro.html
-* https://spatialthoughts.com/courses/
-* Geographic Data Science, a course designed by Dr. Dani Arribas-Bel - https://darribas.org/gds_course/content/home.html
-
-
 ## Setup
 
 ### Get the materials
@@ -75,7 +60,7 @@ Conda install from requirements.txt
 `conda install --yes --file requirements.txt`
 
 
-#### List of Installations
+<details><summary>List of Installations</summary>
 
 Install Jupyter Lab
 
@@ -112,8 +97,23 @@ Rise
 OSMnx (Optional)
 
 `!conda install osmnx -y`
-
+</details>
 
 #### Create Conda Requirements file
 
 `conda list -e > requirements.txt`
+
+
+### Additional Resources
+
+* Original version of this workshop by Danny Sheehan - https://github.com/nygeog/sdsc
+* Class for Pratt SAVI 810 2020-03: Intro to Python Scripting for Geospatial - https://github.com/pratt-savi-810/pratt-savi-810-2020-03
+* Geographic Data Science Lab is a research centre at the University of Liverpool -  https://www.liverpool.ac.uk/geographic-data-science/
+* CSC Finland – IT Center for Science - Welcome to Introduction to Python GIS -course 2018 - https://automating-gis-processes.github.io/CSC/index.html
+* https://modern-gis-curriculum-new-learngis.hub.arcgis.com/
+* https://introduction-to-remote-sensing-learngis.hub.arcgis.com/
+* https://learn.arcgis.com/en/gallery/
+* https://geobgu.xyz/py/index.html
+* https://pygis.io/docs/a_intro.html
+* https://spatialthoughts.com/courses/
+* Geographic Data Science, a course designed by Dr. Dani Arribas-Bel - https://darribas.org/gds_course/content/home.html
