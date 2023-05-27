@@ -55,5 +55,4 @@ python/build: python/create-env
 
 ## Runs the Jupyter Notebook
 python/run: python/build
-	source env/bin/activate && jupyter notebook
-
+	source env/bin/activate && jupyter notebook --NotebookApp.token='sdsc' --NotebookApp.password=''
