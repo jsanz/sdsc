@@ -29,11 +29,15 @@ docker/clean:
 
 ## Build the docker image
 docker/build:
-	@docker build -t sdsc .
+	@docker build -t jsanz/sdsc .
 
 ## Run the image mounting this folder at /sdsc
 docker/run: docker/build
-	@docker run -it --rm --name sdsc -p 8888:8888 -v $${PWD}:/sdsc sdsc:latest
+	@docker run -it --rm --name sdsc -p 8888:8888 -v $${PWD}:/sdsc jsanz/sdsc:latest
+
+## Publish the docker image to docker hub
+docker/publish:
+	@docker push jsanz/sdsc
 
 ## Run the image without mounting this folder
 docker/run-isolated:
