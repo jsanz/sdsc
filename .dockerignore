@@ -132,6 +132,7 @@ dmypy.json
 .local/
 .jupyter/
 .vscode/
+cache
 
 .git
 .gitignore
