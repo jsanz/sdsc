@@ -56,3 +56,7 @@ python/build: python/create-env
 ## Runs the Jupyter Notebook
 python/run: python/build
 	source env/bin/activate && jupyter notebook --NotebookApp.token='sdsc' --NotebookApp.password=''
+
+## Generates an HTML export of the notebook
+python/convert: python/build
+	source env/bin/activate && jupyter nbconvert 2023-foundations-of-geospatial.ipynb --to slides
