@@ -17,7 +17,7 @@ help:
 	    helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
 	gsub("\\\\", "", helpCommand); \
 	gsub(":+$$", "", helpCommand); \
-	printf "  \x1b[32;01m%-15s\x1b[0m %s\n", helpCommand, helpMessage; \
+	printf "  \x1b[32;01m%-35s\x1b[0m %s\n", helpCommand, helpMessage; \
 	} \
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST) 
@@ -59,4 +59,14 @@ python/run: python/build
 
 ## Generates an HTML export of the notebook
 python/convert: python/build
-	source env/bin/activate && jupyter nbconvert 2023-foundations-of-geospatial.ipynb --to slides
+	source env/bin/activate && \
+		jupyter nbconvert 2023-foundations-of-geospatial.ipynb --to html --stdout \
+			> workshop.html
+	source env/bin/activate && \
+		jupyter nbconvert 2023-foundations-of-geospatial.ipynb --to slides --stdout \
+			> slides.html
+
+## Runs a local webserver on the exports folder
+python/export-serve: python/convert
+	source env/bin/activate && \
+		python -m http.server  --directory . 8080
