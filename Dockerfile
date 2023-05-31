@@ -14,8 +14,7 @@ RUN pip install -r /tmp/requirements.txt
 RUN useradd -m -d /sdsc -s /bin/bash sdsc
 USER sdsc
 
-COPY img /sdsc/
-COPY data /sdsc/
+COPY img data /sdsc/
 COPY 2023-foundations-of-geospatial.ipynb /sdsc
 
 WORKDIR /sdsc
